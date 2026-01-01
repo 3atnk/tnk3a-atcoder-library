@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 class WeightedUnionFind():
     def __init__(self, n):
         self.n = n
