@@ -59,3 +59,13 @@ class WeightedUnionFind():
     def same(self, x, y):
         """xとyが同じ集合に属するかを判定する"""
         return self.find(x) == self.find(y)
+
+"""
+使用例
+uf = WeightedUnionFind(5)
+uf.union(0, 1, 10) # 0番から1番への重みが10
+uf.union(1, 2, 5)  # 1番から2番への重みが5
+
+print(uf.diff(0, 2)) # 出力: 15 (0->1->2 なので 10+5)
+print(uf.size(0))    # 出力: 3 (0, 1, 2が同じグループ)
+"""
